@@ -38,13 +38,14 @@ export class AppComponent implements OnInit {
       // Log a delta every time the type changes
       // Learn more about the delta format here: https://quilljs.com/docs/delta/
       console.log('delta:', event.changes.delta);
+
     });
 
-    const webrtcProvider = new WebrtcProvider(graphId, ydoc);
-    console.log(webrtcProvider);
+    // const webrtcProvider = new WebrtcProvider(graphId, ydoc);
+    // console.log(webrtcProvider);
 
     const wsProvider = new WebsocketProvider(
-      'ws://localhost:1234',
+      'ws://localhost:3000',
       graphId,
       ydoc
     );
